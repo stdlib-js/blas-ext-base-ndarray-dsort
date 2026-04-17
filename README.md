@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dsort from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-dsort@deno/mod.js';
+import dsort from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-dsort@v0.0.0-deno/mod.js';
 ```
 
 #### dsort( arrays )
@@ -103,7 +103,7 @@ The function has the following parameters:
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-uniform@deno/mod.js';
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@deno/mod.js';
-import dsort from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-dsort@deno/mod.js';
+import dsort from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-dsort@v0.0.0-deno/mod.js';
 
 var x = uniform( [ 10 ], -100, 100 );
 console.log( ndarray2array( x ) );
