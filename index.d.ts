@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,33 +16,44 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { typedndarray, float64ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Sort a one-dimensional double-precision floating-point ndarray.
+* Sorts a one-dimensional double-precision floating-point ndarray.
 *
-* @module @stdlib/blas-ext-base-ndarray-dsort
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*     -   a zero-dimensional ndarray specifying the sort order.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
 * var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-* var dsort = require( '@stdlib/blas-ext-base-ndarray-dsort' );
 *
 * var x = new Float64Vector( [ 1.0, -2.0, 3.0, -4.0 ] );
 *
-* var order = scalar2ndarray( 1.0, {
-*     'dtype': 'generic'
+* var ord = scalar2ndarray( 1.0, {
+*    'dtype': 'generic'
 * });
 *
-* var out = dsort( [ x, order ] );
+* var out = dsort( [ x, ord ] );
 * // returns <ndarray>[ -4.0, -2.0, 1.0, 3.0 ]
+*
+* var bool = ( out === x );
+* // returns true
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function dsort( arrays: [ float64ndarray, typedndarray<number> ] ): float64ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = dsort;
